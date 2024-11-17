@@ -1,9 +1,9 @@
 package dev.migwel.design.bloomfilter.impl;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 class DefaultBloomFilterTest {
 
@@ -11,6 +11,6 @@ class DefaultBloomFilterTest {
 
     @Test
     void isPresent() {
-        Assertions.assertTrue(filter.isPresent("myString"));
+        assertThat(filter.isPresent("myString")).isTrue();
     }
 }
